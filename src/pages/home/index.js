@@ -28,6 +28,10 @@ const Home = () => {
             setShowPhoto(true);
             setShowSearch(false);
             setShowPhotos(false);
+        } else {
+            setShowPhoto(false);
+            setShowSearch(true);
+            setShowPhotos(true);
         }
     }, [searchResult.length, searchValue])
 

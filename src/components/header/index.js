@@ -9,7 +9,6 @@ import { getImagesUsingKeyword } from '../../services/unsplash';
 const Header = (props) => {
   const searchInput = useRef(null);
   const { setSearchResult, setSearchValue } = props;
-
   const handleSearch = async (event) => {
     event.preventDefault();
     const data = await getImagesUsingKeyword(searchInput.current.value);
@@ -17,10 +16,14 @@ const Header = (props) => {
     setSearchValue(searchInput.current.value);
   }
 
+  const handleImage = () => {
+    setSearchResult([]);
+  }
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid className='header-wrapper'>
-        <div className='logo'>Image Gallery</div>
+        <div className='logo' onClick={handleImage}>Image Gallery</div>
           <Form className="d-flex">
             <Form.Control
               type="search"
