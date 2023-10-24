@@ -1,0 +1,128 @@
+.header-wrapper {
+display: flex;
+justify-content: space-between;
+padding: 1rem 12rem;
+align-items: center;
+}
+
+.header-wrapper .logo {
+color: var(--coal);
+font-family: Pattaya;
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.header-wrapper .links .navbar-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-wrapper .links .navbar-links a {
+    color: var(--coal);
+    text-decoration: none;
+}
+
+.header-wrapper .header-search {
+padding: 5px 8px;
+width: 25rem;
+border-radius: 6px;
+border: 1px solid var(--gray-bg);
+background: var(--off_white);
+box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.05) inset;
+font-family: 'Poppins';
+}
+
+.header-wrapper .header-search-btn {
+    border: none;
+    padding: 5px 8px;
+    color: var(--white);
+    background-color: var(--gray);
+    border-radius: 2px;
+    font-family: 'Poppins';
+    min-width: 6rem;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#navbarScrollingDropdown {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .header-wrapper {
+        padding: 1rem 8rem;
+        }
+}
+
+@media screen and (max-width: 1070px) {
+    .header-wrapper {
+        padding: 1rem 5rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header-wrapper {
+        padding: 1rem;
+    }
+
+    .header-wrapper .header-search {
+        width: 18rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .header-wrapper .logo {
+        font-size: 25px;
+    }
+
+    .header-wrapper .links {
+        gap: .8rem;
+    }
+
+    .header-wrapper .header-search {
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .header-wrapper .header-search {
+        width: 8rem;
+    }
+
+    .header-wrapper .links .navbar-links {
+        gap: 10px;
+    }
+
+    .header-wrapper .links .navbar-links a {
+        font-size: 14px;
+    }
+
+    .header-wrapper .logo {
+        font-size: 17px;
+    }
+}
+
+
+@media screen and (max-width: 495px) {
+    .header-wrapper .links .navbar-links {
+        display: none;
+    }
+
+    .header-wrapper .logo {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header-wrapper .logo {
+        font-size: 17px;
+    }
+    .header-wrapper .header-search {
+        width: 7.5rem;
+        padding: 4px;
+    }
+        
+}
